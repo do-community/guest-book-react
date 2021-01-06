@@ -17,16 +17,34 @@ export default function App() {
   }
 
   return (
-    <div className="app min-h-screen bg-center">
-      <div className="max-w-xl mx-auto px-10 py-20">
-        <Header />
+    <>
+      <div className="app min-h-screen bg-center">
+        <div className="max-w-xl mx-auto px-10 py-20">
+          <Header />
 
-        {/* show a form to create a message */}
-        <MessageForm addMessage={addMessage} />
+          {/* show a form to create a message */}
+          <MessageForm addMessage={addMessage} />
 
-        {/* show all messages */}
-        <Messages messages={messages} />
+          {/* show all messages */}
+          <Messages messages={messages} />
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
+  );
+}
+
+function Footer() {
+  return (
+    <a
+      className="bg-blue-400 hover:bg-blue-500 p-10 text-white text-xl font-bold flex justify-center items-center transition duration-300"
+      href="https://do.co/chris"
+    >
+      Hosted on{" "}
+      <img
+        src="https://i.imgur.com/h482SSG.png"
+        className="h-6 md:h-10 ml-4 transform"
+      />
+    </a>
   );
 }
